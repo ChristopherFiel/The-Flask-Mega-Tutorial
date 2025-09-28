@@ -1,6 +1,36 @@
-2025-09-28 14:36:59,179 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
-2025-09-28 16:58:47,272 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
-2025-09-28 16:58:57,751 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
-2025-09-28 17:07:16,273 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
-2025-09-28 19:57:30,515 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
-2025-09-28 20:06:13,674 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
+2025-09-28 20:41:29,788 ERROR: Exception on /user/chris [GET] [in /Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/routes.py", line 81, in user
+    return render_template('user.html', title='Profile', user=user, posts=posts)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/user.html", line 16, in block 'content'
+    {{ form.hidden_tag() }}
+    ^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined

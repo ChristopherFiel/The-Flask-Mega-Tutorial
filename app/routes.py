@@ -78,7 +78,6 @@ def user(username):
         {'author': user, 'body': 'Test post #1'},
         {'author': user, 'body': 'Test post #2'}
     ]
-    return render_template('user.html', title='Profile', user=user, posts=posts)
     form = EmptyForm()
     return render_template('user.html', user=user, posts=posts, form=form)
 
