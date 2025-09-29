@@ -48,3 +48,5 @@ jinja2.exceptions.UndefinedError: 'form' is undefined
 2025-09-29 11:08:06,724 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
 2025-09-29 11:14:43,865 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
 2025-09-29 11:16:10,550 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:27:39,159 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:48]
+2025-09-29 11:28:00,051 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:48]
