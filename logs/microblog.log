@@ -1,0 +1,55 @@
+2025-09-28 20:41:29,788 ERROR: Exception on /user/chris [GET] [in /Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/routes.py", line 81, in user
+    return render_template('user.html', title='Profile', user=user, posts=posts)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/app/templates/user.html", line 16, in block 'content'
+    {{ form.hidden_tag() }}
+    ^^^^^^^^^
+  File "/Users/christopherfieljr./Desktop/intership/microblog/venv/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2025-09-28 20:48:41,575 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
+2025-09-29 09:21:48,660 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
+2025-09-29 09:27:20,676 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
+2025-09-29 09:36:57,647 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:44]
+2025-09-29 09:46:38,330 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 10:43:09,021 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 10:45:44,861 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 10:47:09,213 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 10:47:49,626 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 10:48:16,262 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:02:53,792 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:08:06,724 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:14:43,865 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:16:10,550 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:46]
+2025-09-29 11:27:39,159 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:48]
+2025-09-29 11:28:00,051 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:48]
+2025-09-29 11:37:10,915 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:48]
+2025-09-29 13:23:08,664 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:54]
+2025-09-29 13:24:55,633 INFO: Microblog startup [in /Users/christopherfieljr./Desktop/intership/microblog/app/__init__.py:54]
