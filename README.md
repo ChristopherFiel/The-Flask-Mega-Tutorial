@@ -1,2 +1,2 @@
-# The-Flask-Mega-Tutorial
-Github Repository to track my progress through the flask mega tutorial by Miguel Grinberg.
+# Flask Blog Website
+A simple blog website made with flask
